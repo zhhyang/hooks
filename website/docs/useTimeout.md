@@ -3,29 +3,29 @@ id: useTimeout
 title: useTimeout
 ---
 
-组件 mount 时执行
+处理 setTimeout
 
-## Examples
-import {useState} from 'react'
-import { Button, Switch,message } from 'antd';
-import { useTimeout } from '../../src/index';
+## 代码演示
 
-export const Basic = () => {
-const [ count, setCount] = useState(0);
-useTimeout(() =>{setCount(count+1)},5000)
-return (<div>{count}</div>)
-};
-
-<Basic />
+```jsx live
+function Basic() {
+  const [count, setCount] = useState(0);
+  useTimeout(() => {
+    setCount(count + 1);
+  }, 5000);
+  return <div>{count}</div>;
+}
+```
 
 ## API
 
 ```javascript
- useMount(() => {});
+useTimeout(fn:() => {}, (delay: number | undefined | null));
 ```
 
 ### Params
 
-| 参数         | 说明                     | 类型                                     | 默认值 |
-| ------------ | ------------------------ | ---------------------------------------- | ------ |
-| fn | 组件mount的时候调用的函数 | () => void  | -  |
+| 参数  | 说明                                                | 类型                              | 默认值 |
+| ----- | --------------------------------------------------- | --------------------------------- | ------ |
+| fn    | delay 到期后执行的函数                              | `() => void`                      | -      |
+| delay | 延时时间，设置为`null`或者 `undefined` 会停止定时器 | `number` \| `undefined` \| `null` | -      |

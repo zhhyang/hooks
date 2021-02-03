@@ -6,11 +6,9 @@ title: useBoolean
 优雅的管理 boolean 值的 Hook。
 
 ## 代码演示
+```jsx live
 
-import { Button, Switch } from 'antd';
-import { useBoolean } from '../../src/index';
-
-export const Demo =  () => {
+function Demo  ()  {
   const { state, toggle, setTrue, setFalse } = useBoolean(true)
   return (
     <div>
@@ -33,8 +31,7 @@ export const Demo =  () => {
   );
 }
 
-<Demo />
-
+```
 
 ## API
 
