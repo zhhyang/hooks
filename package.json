@@ -1,8 +1,6 @@
 {
+  "name": "root",
   "version": "0.0.2",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "es/index.d.ts",
   "scripts": {
     "clean": "lerna run  clean ",
     "build": "lerna run build ",
@@ -17,5 +15,11 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "private": true
 }
