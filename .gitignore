@@ -20,3 +20,5 @@ node_modules/
 es/
 lib/
 
+package-lock.json
+
