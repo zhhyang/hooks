@@ -26,13 +26,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    - run: yarn install
-    - run: lerna bootstrap
-    - run: lerna run --scope hooks build
-    - run: lerna run --scope website build
     - name: Deploy
       run: |
+        cd website
+        yarn install
+        yarn run build
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        lerna run --scope website deploy -- -u "github-actions-bot <support+actions@github.com>"
+        npm run deploy -- -- -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

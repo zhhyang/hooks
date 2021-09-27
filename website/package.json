@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "docusaurus start",
+    "start": "docusaurus start -p 8080",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle @docusaurus/theme-live-codeblock ReactLiveScope --danger",
-    "deploy": "docusaurus deploy"
+    "deploy": "GIT_USER=zhhyang GIT_PASS= docusaurus deploy"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.70",
