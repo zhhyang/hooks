@@ -8,49 +8,44 @@ title: useRefState
 ## 代码演示
 
 ```jsx live
-
 function Demo() {
-    const [state, setState, ref] = useRefState(0);
+  const [state, setState, ref] = useRefState(0);
 
-    const [count,setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-    const onChange = useCallback(() => {
-        setState(ref.current + 1);
-    }, []);
-    
-    const onInc = useCallback(() =>{
-        setCount(count+1)
-    },[])
-    // [count]
+  const onChange = useCallback(() => {
+    setState(ref.current + 1);
+  }, []);
 
-    return (
-        <div>
-            <p>
-                {state}
-            </p>
-            <p>
-                <Button type="primary" onClick={onChange}>
-                    Change
-                </Button>
-            </p>
-            <br/>
-            <p>
-                {count}
-            </p>
-            <p>
-                <Button type="primary" onClick={onInc}>
-                    Change onInc
-                </Button>
-            </p>
-        </div>
-    );
+  const onInc = useCallback(() => {
+    setCount(count + 1);
+  }, []);
+  // [count]
+
+  return (
+    <div>
+      <p>{state}</p>
+      <p>
+        <Button type="primary" onClick={onChange}>
+          Change
+        </Button>
+      </p>
+      <br />
+      <p>{count}</p>
+      <p>
+        <Button type="primary" onClick={onInc}>
+          Change onInc
+        </Button>
+      </p>
+    </div>
+  );
 }
 ```
 
 ## API
 
-```javascript
-const [state, setState] = useSetState < S > (initialState: S | (() => S));
+```ts
+const [state, setState, ref] = useRefState<S>(initialState: S | (() => S));
 ```
 
 ### Result
@@ -59,6 +54,7 @@ const [state, setState] = useSetState < S > (initialState: S | (() => S));
 | -------- | ------------------------------------------------------------------------- | ----------------------------------- |
 | state    | 状态值                                                                    | object                              |
 | setState | 触发状态更改的函数,可以接受一个参数修改状态值或者一个返回参数修改值的函数 | `state or (state: S) => Partial<S>` |
+| ref | ref.current获取最新的值 |  |
 
 ### Params
 
