@@ -4,6 +4,6 @@ module.exports = {
     State:['useBoolean','useToggle','useSetState','useForceUpdate','useRefState','usePrevious'
     ],
     LifeCycle:["useMount","useUnmount"],
-    SideEffect:['useTimeout']
+    SideEffect:['useTimeout','useInterval']
   },
 };

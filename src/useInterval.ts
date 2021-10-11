@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import usePersistFn, { noop } from "./usePersistFn";
 
-const useTimeout = (fn: noop, ms: number | null | undefined) => {
+function useInterval(fn: noop, ms: number | null | undefined) {
   const timerFn = usePersistFn(fn);
 
   useEffect(() => {
@@ -13,11 +13,11 @@ const useTimeout = (fn: noop, ms: number | null | undefined) => {
       timerFn();
     }
 
-    let id = setTimeout(tick, ms);
+    let id = setInterval(tick, ms);
     return () => {
-      clearTimeout(id)
+      clearInterval(id);
     };
   }, [ms, timerFn]);
-};
+}
 
-export default useTimeout;
+export default useInterval;

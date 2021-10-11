@@ -35,7 +35,7 @@ function Demo  ()  {
 
 ## API
 
-```javascript
+```ts
 const {
   state, 
   toggle,

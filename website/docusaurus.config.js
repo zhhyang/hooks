@@ -1,7 +1,7 @@
 module.exports = {
   title: 'My Hooks',
   tagline: 'The tagline of my site',
-  url: 'https://zhhyang.github.io/hooks/',
+  url: 'https://zhhyang.github.io',
   baseUrl: '/hooks/',
   favicon: 'img/favicon.ico',
   organizationName: 'zhhyang', // Usually your GitHub org/user name.

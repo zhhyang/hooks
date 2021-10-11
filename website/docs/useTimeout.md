@@ -17,6 +17,23 @@ function Basic() {
 }
 ```
 
+```jsx live
+function Basic() {
+  const [count, setCount] = useState(0);
+  const [delay, setDelay] = useState(5000);
+  useTimeout(() => {
+    setCount(count + 1);
+  }, delay);
+  return (
+    <div>
+      {count}
+      <br />
+      <Button onClick={() => setDelay(undefined)}>点击停止</Button>
+    </div>
+  );
+}
+```
+
 ## API
 
 ```javascript

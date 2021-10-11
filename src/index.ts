@@ -7,6 +7,7 @@ import usePrevious from './usePrevious';
 import useMount from './useMount';
 import useUnmount from './useUnmount';
 import useTimeout from './useTimeout';
+import useInterval from './useInterval';
 
 export {
     useBoolean,
@@ -17,5 +18,6 @@ export {
     usePrevious,
     useMount,
     useUnmount,
-    useTimeout
+    useTimeout,
+    useInterval
 };
