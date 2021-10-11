@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import useToggle from '../useToggle';
+import useToggle from './useToggle';
 
 const useBoolean = (defaultValue: boolean = false) => {
     const { state, toggle } = useToggle(defaultValue);

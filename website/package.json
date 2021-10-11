@@ -7,7 +7,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle @docusaurus/theme-live-codeblock ReactLiveScope --danger",
     "deploy": "docusaurus deploy",
-    "action-deploy": "docusaurus deploy -- -u \"github-actions-bot <support+actions@github.com>\""
+    "action-deploy": "docusaurus deploy -u \"github-actions-bot <support+actions@github.com>\""
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.70",
