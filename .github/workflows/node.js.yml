@@ -32,6 +32,6 @@ jobs:
         yarn install
         yarn run build
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        docusaurus deploy -u "github-actions-bot <support+actions@github.com>"
+        yarn run action-deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
