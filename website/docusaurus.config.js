@@ -1,10 +1,10 @@
 module.exports = {
-  title: 'My Site',
+  title: 'My Hooks',
   tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://zhhyang.github.io/hooks/',
   baseUrl: '/hooks/',
   favicon: 'img/favicon.ico',
-  organizationName: 'yep-org', // Usually your GitHub org/user name.
+  organizationName: 'zhhyang', // Usually your GitHub org/user name.
   projectName: 'hooks', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -21,7 +21,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/yep-org/hooks',
+          href: 'https://github.com/zhhyang/hooks',
           label: 'GitHub',
           position: 'right',
         },

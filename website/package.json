@@ -6,7 +6,8 @@
     "start": "docusaurus start -p 8080",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle @docusaurus/theme-live-codeblock ReactLiveScope --danger",
-    "deploy": "GIT_USER=zhhyang GIT_PASS= docusaurus deploy"
+    "deploy": "docusaurus deploy",
+    "action-deploy": "docusaurus deploy -- -u \"github-actions-bot <support+actions@github.com>\""
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.70",
