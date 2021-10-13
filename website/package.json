@@ -7,6 +7,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle @docusaurus/theme-live-codeblock ReactLiveScope --danger",
     "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
     "action-deploy": "gh-pages -d build"
   },
   "dependencies": {
